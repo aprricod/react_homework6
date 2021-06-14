@@ -1,6 +1,7 @@
 import "./App.css";
 import Variant1 from "./Components/Variant1";
 import Variant2 from "./Components/Variant2";
+import Variant3 from "./Components/Variant3";
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <Variant1></Variant1>
       <hr />
       <Variant2></Variant2>
+      <hr />
+      <Variant3></Variant3>
     </div>
   );
 }
