@@ -1,42 +1,34 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-const Seasons5 = ({ value }) => {
-  //   return (
-  //     <div>
-  //       <div className="summer">Лето</div>
-  //     </div>
-  //   );
-
-  if (value === 1) {
-    return (
-      <div>
-        <div className="summer">Лето</div>
+const Seasons3 = ({ value }) => {
+  return (
+    <div>
+      <div
+        className={
+          value === 1
+            ? "summer"
+            : value === 2
+            ? "autumn"
+            : value === 3
+            ? "winter"
+            : "spring"
+        }
+      >
+        {value === 1
+          ? "Лето"
+          : value === 2
+          ? "Осень"
+          : value === 3
+          ? "Зима"
+          : "Весна"}
       </div>
-    );
-  } else if (value === 2) {
-    return (
-      <div>
-        <div className="autumn">Осень</div>
-      </div>
-    );
-  } else if (value === 3) {
-    return (
-      <div>
-        <div className="winter">Зима</div>
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <div className="spring">Весна</div>
-      </div>
-    );
-  }
+    </div>
+  );
 };
 
-Seasons5.propTypes = {
+Seasons3.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default Seasons5;
+export default Seasons3;

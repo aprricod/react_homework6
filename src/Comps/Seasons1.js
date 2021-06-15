@@ -2,12 +2,6 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const Seasons1 = ({ value }) => {
-  //   return (
-  //     <div>
-  //       <div className="summer">Лето</div>
-  //     </div>
-  //   );
-
   if (value === 1) {
     return (
       <div>
