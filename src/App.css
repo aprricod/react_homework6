@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.summer {
+  background-color: green;
+}
+
+.autumn {
+  background-color: goldenrod;
+}
+
+.winter {
+  background-color: antiquewhite;
+}
+
+.sping {
+  background-color: violet;
+}
