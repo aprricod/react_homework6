@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Content from "./Content";
+import RecursiveButton from "./RecursiveButton";
 
-function App() {
+function App(props) {
+  const [showMode, setShowMode] = useState(true);
+
+  const handlerClick = () => {
+    setShowMode(!showMode);
+  };
+
+  let content = null;
+
+  if (showMode) {
+    content = <Content></Content>;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" onClick={handlerClick}>
+      <RecursiveButton />
+      <button>Выключение текста</button>
+      {content}
     </div>
   );
 }
