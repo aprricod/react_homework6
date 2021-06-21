@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Variant1 from "./Components/Variant1";
 import Variant2 from "./Components/Variant2";
